@@ -1,2 +1,2 @@
 # CineMax
-Aplikacja służąca do zarządzania organizacją kina.
+Frontend aplikacji służącej do zarządzania organizacją kina.
