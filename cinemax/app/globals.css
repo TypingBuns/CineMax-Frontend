@@ -2,40 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 2, 0, 36;
-    --background-end-rgb: 4, 0, 36;
-  }
+html{
+  height: 100%;
 }
-
 body {
-  /* flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0; */
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
     background: rgb(2,0,25,1);
-    background: linear-gradient(200deg, rgba(2,0,25,1) 0%, rgba(0,0,70,1) 90%, rgb(0, 62, 75) 100%);
+    background: linear-gradient(225deg, rgba(2,0,25,1) 0%, rgba(0,0,70,1) 90%, rgb(0, 62, 75) 100%); 
 
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.navbar-mid{
+  @apply w-28 flex justify-center items-center
+}
+.navbar-mid:hover{
+  @apply shadow-lg shadow-rose-500 border-b-2 bg-rose-700/75 ease-in duration-200
+}
+
+.navbar-right:hover{
+  @apply shadow-lg shadow-sky-500 border-b-2 ease-in duration-200
 }

@@ -1,2 +1,3 @@
+cd cinemax
 npm run dev
 rafce
