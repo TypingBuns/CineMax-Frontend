@@ -1,5 +1,10 @@
-import NavBar from './NavBar';
-
+import Navbar from './Navbar';
+import Introduction from './Introduction';
+import Footer from './Footer';
+import Carousel from './Carousel';
 export {
-    NavBar
+    Navbar,
+    Introduction,
+    Footer,
+    Carousel
 }
