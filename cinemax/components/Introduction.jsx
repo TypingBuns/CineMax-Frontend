@@ -10,6 +10,8 @@ const Introduction = () => {
       width={512}
       height={512}
       alt="Odkryj to z Nami!"
+      layout="fixed"
+      objectFit="cover"
     />
     {/* <Image
       src="/cinemax-logo.png"
