@@ -12,22 +12,22 @@ const Footer = () => {
       <div className="flex flex-col items-center justify-center my-4">
         <span className="uppercase font-bold ">Śledź nas na Social Mediach!</span>
         <div className="flex flex-row items-center justify-center my-4 gap-5">
-        <Link href="https://www.facebook.com" className="flex flex-col items-center " target="_blank">
+        <Link href="https://www.facebook.com" className="flex flex-col items-center text-md" target="_blank">
         <FaFacebook className="text-3xl"/>
         <p>Facebook</p>
         </Link>
 
-        <Link href="https://www.instagram.com" className="flex flex-col items-center" target="_blank">
+        <Link href="https://www.instagram.com" className="flex flex-col items-center text-md" target="_blank">
         <FaInstagram className="text-3xl "/>
         <p>Instagram</p>
         </Link>
         
-        <Link href="https://www.twitter.com" className="flex flex-col items-center" target="_blank">
+        <Link href="https://www.twitter.com" className="flex flex-col items-center text-md" target="_blank">
         <FaTwitter className="text-3xl"/>
         <p>Twitter</p>
         </Link>
 
-        <Link href="https://www.youtube.com" className="flex flex-col items-center" target="_blank">
+        <Link href="https://www.youtube.com" className="flex flex-col items-center text-md" target="_blank">
         <FaYoutube className="text-3xl"/>
         <p>Youtube</p>
         </Link>
@@ -46,26 +46,26 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col">
-          <h1 className="uppercase font-bold mb-4">Obsługa</h1>
-          <Link className="footer-link" href="/">Kontakt</Link>
-          <Link className="footer-link" href="/">Płatności</Link>
-          <Link className="footer-link" href="/">Bilety</Link>
-          <Link className="footer-link" href="/">Zwroty</Link>
-          <Link className="footer-link" href="/">FAQ</Link>
+          <h1 className="uppercase font-bold mb-4 text-lg">Obsługa</h1>
+          <Link className="hover:text-gray-300 ease-in-out duration-100 no-underline" href="/">Kontakt</Link>
+          <Link className="hover:text-gray-300 ease-in-out duration-100" href="/">Płatności</Link>
+          <Link className="hover:text-gray-300 ease-in-out duration-100" href="/">Bilety</Link>
+          <Link className="hover:text-gray-300 ease-in-out duration-100" href="/">Zwroty</Link>
+          <Link className="hover:text-gray-300 ease-in-out duration-100" href="/">FAQ</Link>
         </div>
         <div className="flex flex-col">
-          <h1 className="uppercase font-bold mb-4">Informacje</h1>
-          <Link className="footer-link" href="/">Aktualności</Link>
-          <Link className="footer-link"href="/">O nas</Link>
-          <Link className="footer-link" href="/">Pracuj z nami</Link>
-          <Link className="footer-link" href="/">Polityka prywatności</Link>
-          <Link className="footer-link" href="/">Regulamin</Link>
-          <Link className="footer-link" href="/">Co gramy aktualnie</Link>
+          <h1 className="uppercase font-bold mb-4 text-lg">Informacje</h1>
+          <Link className="hover:text-gray-300 ease-in-out duration-100" href="/">Aktualności</Link>
+          <Link className="hover:text-gray-300 ease-in-out duration-100"href="/">O nas</Link>
+          <Link className="hover:text-gray-300 ease-in-out duration-100" href="/">Pracuj z nami</Link>
+          <Link className="hover:text-gray-300 ease-in-out duration-100" href="/">Polityka prywatności</Link>
+          <Link className="hover:text-gray-300 ease-in-out duration-100" href="/">Regulamin</Link>
+          <Link className="hover:text-gray-300 ease-in-out duration-100" href="/">Co gramy aktualnie</Link>
         </div>
 
         
         <div className="flex flex-col ">
-        <h1 className="uppercase font-bold mb-4">Nasza aplikacja</h1>
+        <h1 className="uppercase font-bold mb-4 text-lg">Nasza aplikacja</h1>
           <div className="flex flex-row gap-2">
           <Link href="https://www.apple.com/pl/app-store/" target="_blank">
           <Image src={appstore_img} width={153.75} height={45.675} alt="Pobierz aplikację na App Store"/>
