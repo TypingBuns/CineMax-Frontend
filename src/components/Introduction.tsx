@@ -2,7 +2,7 @@ import React from 'react'
 import Link from "next/link";
 import Image from 'next/image'
 import family from "@/assets/family-2.png"
-import logo3D from "@/assets/logo/logo3D-cropped4.png"
+import logo3D from "@/assets/logo/logo3D-cropped.png"
 const Introduction = () => {
   return (
     <div className='flex justify-center flex-row gap-12'>

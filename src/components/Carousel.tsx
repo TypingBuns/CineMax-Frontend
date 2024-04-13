@@ -55,7 +55,7 @@ export default function CarouselBasicExample(): JSX.Element {
   };
   return (
     <div className='flex justify-center items-center w-3/5'>
-
+     
       <TECarousel theme={theme} showControls ride="carousel" interval={6000} >
 
         <div className="relative w-full h-full overflow-hidden after:clear-both after:block after:content-[''] block justify-center rounded-3xl customShadow">
@@ -63,8 +63,7 @@ export default function CarouselBasicExample(): JSX.Element {
         <h1 className='uppercase text-2xl font-bold py-3 px-8 bg-custombgColor rounded-b-3xl customShadow'>Teraz gramy</h1>
       </div>
           {slides.map((slide,index) =>(
-            <TECarouselItem
-            itemID={index+1}
+            <TECarouselItem key={index} itemID={index+1}
             className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
           >
             <Image
@@ -99,6 +98,7 @@ export default function CarouselBasicExample(): JSX.Element {
             ))}
         </div>
       </TECarousel>
+      
     </div>
   );
 }
