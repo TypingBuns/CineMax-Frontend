@@ -22,7 +22,7 @@
 // export default config;
 
 import type { Config } from "tailwindcss";
-
+const colors = require('tailwindcss/colors')
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -31,6 +31,7 @@ const config: Config = {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/tw-elements-react/dist/js/**/*.js",
+    "./dist/*.{html,js}",
   ],
   theme: {
     extend: {
@@ -40,6 +41,10 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    colors:{
+      'custombgColor': '#0e1233',
+      ...colors,
+    }
   },
   darkMode: "class",
   plugins: [require("tw-elements-react/dist/plugin.cjs")],

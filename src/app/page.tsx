@@ -4,9 +4,8 @@ import Introduction from "@/components/Introduction";
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-center flex-col space-y-8">
+    <div className="flex justify-center items-center flex-col space-y-14 py-10">
     <Introduction/>
-    {/* <Carousel/> */}
     <CarouselReact/>
     </div>
   );
