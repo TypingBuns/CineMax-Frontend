@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
 * {
   margin: 0;
@@ -21,7 +21,6 @@ body {
     background: linear-gradient(225deg, rgba(2,0,25,1) 0%, rgba(0,0,70,1) 90%, rgb(0, 62, 75) 100%); 
     background-attachment: fixed;
 }
-
 .navbar-mid{
   @apply w-28 flex justify-center items-center
 }
@@ -35,4 +34,10 @@ body {
 
 .footer-link{
   @apply hover:text-gray-300 ease-in-out duration-100
+}
+.customShadow{
+  filter: drop-shadow(-15px -15px 15px rgba(0, 0, 0, 0.35)) drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.35));
+}
+.customFont{
+  font-family: "Caveat";
 }

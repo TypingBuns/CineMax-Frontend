@@ -14,7 +14,7 @@ const Navbar = () => {
       height={35}
       alt="Home page"
     />
-      </Link>
+            </Link>
       <hr />
       <ul className='flex h-full items-center justify-center' >
         <li className='h-full flex'>
