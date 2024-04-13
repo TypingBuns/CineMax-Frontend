@@ -2,23 +2,24 @@ import React from 'react'
 import Link from "next/link";
 import Image from 'next/image'
 import family from "@/assets/family-2.png"
+import logo3D from "@/assets/logo/logo3D-cropped.png"
 const Introduction = () => {
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center flex-row gap-12'>
+      <p className='customFont'>Odkryj to z Nami!</p>
       <Image
       src={family}
       width={512}
       height={512}
       alt="Odkryj to z Nami!"
-      layout="fixed"
-      objectFit="cover"
     />
-    {/* <Image
-      src="/cinemax-logo.png"
-      width={3307}
-      height={1071}
-      alt="Home page"
-    /> */}
+      <Image
+      src={logo3D}
+      width={512}
+      height={512}
+      alt="Cinemax!"
+    />
+
     </div>
   )
 }
