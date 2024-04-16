@@ -6,7 +6,7 @@ import logo3D from "@/assets/logo/logo3D-cropped.png"
 const Introduction = () => {
   return (
     <div className='flex justify-center flex-row gap-12'>
-      <p className='customFont'>Odkryj to z Nami!</p>
+      <p>Odkryj to z Nami!</p>
       <Image
       src={family}
       width={512}

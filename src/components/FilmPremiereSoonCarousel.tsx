@@ -70,20 +70,22 @@ const Slider = () => {
         draggable={true}
         infinite={true}
         partialVisible={false}
+        showDots={true}
+        
         
       >
         {sliderPremiere.map((slide, index) => {
           return (
-            <div key={index} className="px-5">
+            <div key={index} className="px-3">
               <Image
-              className="w-full"
+              className="w-full rounded-3xl pb-4"
               src={slide.src}
               width={200}
               height={286}
               alt={slide.title}
               />
-              <h1>{slide.title}</h1>
-              <p>{slide.description}</p>
+              <h1 className="py-4 font-">{slide.title}</h1>
+              <p>{slide.description.length > 100 ? slide.description.slice(0,100) + '...' : slide.description}</p>
               <p>Od {slide.dateofpremiere}</p>
             </div>
           );
