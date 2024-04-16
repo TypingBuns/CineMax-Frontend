@@ -18,7 +18,7 @@ import Link from 'next/link';
 export default function CarouselBasicExample(): JSX.Element {
   const slides = [
     {src: budda_jpg, 
-    title: "BUDDA. DZIECIAK '98", 
+    title: "Budda. Dzieciak '98", 
     categories: "Dokumentalny",
     production: "Polska",
     time: "1h 23min",
@@ -28,7 +28,7 @@ export default function CarouselBasicExample(): JSX.Element {
     link: "https://www.youtube.com/watch?v=fLB8tg1QcJQ",},
 
     {src: godzilla_jpg,
-    title: "GODZILLA I KONG: NOWE IMPERIUM",
+    title: "Godzilla i Kong: Nowe Imperium",
     categories: "Akcja, Sci-Fi",
     production: "USA",
     time: "1h 55min",
@@ -38,7 +38,7 @@ export default function CarouselBasicExample(): JSX.Element {
     link: "https://www.youtube.com/watch?v=PW1yFC55JEA",},
 
     {src: pogromocyduchow_jpg,
-    title: "POGROMCY DUCHÓW: IMPERIUM LODU",
+    title: "Pogromcy duchów: Imperium Lodu",
     categories: "Horror, Komedia, Sci-Fi",
     production: "USA",
     time: "1h 55min",
@@ -78,7 +78,7 @@ export default function CarouselBasicExample(): JSX.Element {
               <FaPlay className="text-2xl drop-shadow-[5px_5px_2px_rgba(0,0,0,0.35)]"/>
               </span>
               </Link>
-              <h5 className="text-4xl font-bold">{slide.title}</h5>
+              <h5 className="text-4xl font-bold uppercase">{slide.title}</h5>
               </div>
               <div className='flex items-center flex-row pl-[7.2rem] pt-3 gap-4'>
               <p>{slide.originalTitle}</p>
