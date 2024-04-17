@@ -1,12 +1,13 @@
-import CarouselReact from "@/components/Carousel";
-import Carousel from "@/components/CarouselOld";
+import NowPlayingCarousel from "@/components/NowPlayingCarousel";
 import Introduction from "@/components/Introduction";
+import FilmPremiereSoonCarousel from "@/components/FilmPremiereSoonCarousel";
 
 export default function Home() {
   return (
     <div className="flex justify-center items-center flex-col space-y-14 py-10">
     <Introduction/>
-    <CarouselReact/>
+    <NowPlayingCarousel/>
+    <FilmPremiereSoonCarousel/>
     </div>
   );
 }
