@@ -73,7 +73,7 @@ export default function CarouselBasicExample(): JSX.Element {
             />
             <div className="absolute w-full h-1/2 left-0 bottom-0 text-center text-white md:block bg-gradient-to-t from-custombgColor">
               <div className='flex flex-row items-center pt-44 pl-28 '>
-              <Link href={slide.link} target="_blank" className='pr-3'>
+              <Link href={slide.link} target="_blank" className='pr-3 hover:scale-110 transition-all ease-out duration-300'>
               <span className='h-14 w-14 bg-gradient-to-tl from-rose-800 to-rose-500 rounded-full flex items-center justify-center pl-[0.33rem] '>
               <FaPlay className="text-2xl drop-shadow-[5px_5px_2px_rgba(0,0,0,0.35)]"/>
               </span>
