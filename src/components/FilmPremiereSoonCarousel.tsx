@@ -4,6 +4,8 @@ import React from "react";
 import Image from 'next/image'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { FiChevronLeft } from 'react-icons/fi';
+import { BiChevronRight } from 'react-icons/bi';
 
 import backtoblack_poster_jpg from "@/assets/premiere-soon/back-to-black.jpg";
 import abigail_poster_jpg from "@/assets/premiere-soon/abigail.jpg";
@@ -61,36 +63,52 @@ const sliderPremiere = [
   },
 ]
 const Slider = () => {
+  const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
+    const { carouselState: { currentSlide } } = rest;
+    return (
+        <div className="carousel-button-group  gap-4 flex justify-center 
+        items-center w-full">
+          <button className='block p-3 bg-gray-300 absolute top-0 bottom-1/3 left-0 rounded-full h-1/6 my-auto mx-3 border-4 border-custombgColor' onClick={() => previous()}> <FiChevronLeft /></button>
+          <button className='block p-3 bg-slate-300 absolute top-0 bottom-1/3 right-0 rounded-full h-1/6 my-auto mx-3 border-4 border-custombgColor' onClick={() => next()}> <BiChevronRight /></button>
+       </div>
+    
+     );
+   };
   return (
-    <div className="w-3/4">
+    <div className="w-3/4 items-center">
+      <div className="w-3/12 flex-col p-5 text-center bg-custombgColor mx-auto rounded-t-3xl customShadow ">
+      <h1 className="uppercase text-2xl font-bold">Zapowiedzi</h1>
+      <p className="opacity-80">Nie przegap zbliżających się premier</p>
+      </div>
+      <div className="bg-custombgColor px-5 py-8 rounded-3xl customShadow ">
       <Carousel
+        arrows={false} renderButtonGroupOutside={true} customButtonGroup={<ButtonGroup />}
         responsive={responsive}
         // autoPlay={true}
         swipeable={true}
         draggable={true}
         infinite={true}
         partialVisible={false}
-        showDots={true}
-        
         
       >
-        {sliderPremiere.map((slide, index) => {
-          return (
+        {sliderPremiere.map((slide, index) => (
+
             <div key={index} className="px-3">
               <Image
-              className="w-full rounded-3xl pb-4"
+              className="w-full rounded-3xl mb-4"
               src={slide.src}
               width={200}
               height={286}
               alt={slide.title}
               />
-              <h1 className="py-4 font-">{slide.title}</h1>
-              <p>{slide.description.length > 100 ? slide.description.slice(0,100) + '...' : slide.description}</p>
-              <p>Od {slide.dateofpremiere}</p>
+              <h1 className="pt-4 font-semibold">{slide.title}</h1>
+              <p className="text-sm opacity-60 pt-1 pb-4">Od {slide.dateofpremiere}</p>
+              <p className="text-sm opacity-60">{slide.description.length > 105 ? slide.description.slice(0,105) + '...' : slide.description}</p>
             </div>
-          );
-        })}
+        )
+        )}
       </Carousel>
+      </div>
     </div>
   );
 };

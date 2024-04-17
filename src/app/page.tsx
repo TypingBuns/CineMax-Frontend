@@ -7,7 +7,7 @@ export default function Home() {
     <div className="flex justify-center items-center flex-col space-y-14 py-10">
     <Introduction/>
     <NowPlayingCarousel/>
-    <FilmPremiereSoonCarousel/>q
+    <FilmPremiereSoonCarousel/>
     </div>
   );
 }
