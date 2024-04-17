@@ -44,11 +44,11 @@ const config: Config = {
     colors:{
       'custombgColor': '#0e1233',
       ...colors,
-      sky: colors.lightBlue, // Zamiast lightBlue użyj sky
-      stone: colors.warmGray, // Zamiast warmGray użyj stone
-      neutral: colors.trueGray, // Zamiast trueGray użyj neutral
-      gray: colors.coolGray, // Zamiast coolGray użyj gray
-      slate: colors.blueGray, // Zamiast blueGray użyj slate
+      // sky: colors.lightBlue, // Zamiast lightBlue użyj sky
+      // stone: colors.warmGray, // Zamiast warmGray użyj stone
+      // neutral: colors.trueGray, // Zamiast trueGray użyj neutral
+      // gray: colors.coolGray, // Zamiast coolGray użyj gray
+      // slate: colors.blueGray, // Zamiast blueGray użyj slate
     }
   },
   darkMode: "class",

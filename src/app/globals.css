@@ -38,6 +38,8 @@ body {
 .customShadow{
   filter: drop-shadow(-15px -15px 15px rgba(0, 0, 0, 0.35)) drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.35));
 }
-.customFont{
-  font-family: "Caveat";
+/* 14, 18, 51 */
+.customBackGgGradient{
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 20%, rgba(14, 18, 51, 0.1) 100%);
 }
