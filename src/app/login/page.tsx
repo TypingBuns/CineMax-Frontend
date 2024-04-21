@@ -1,38 +1,35 @@
+'use client'
 import logo from "@/assets/logo/cinemax-logo.png";
 import Image from 'next/image'
-import {Input} from "postcss";
+import { MyButton } from "@/components/common/MyButton";
+import MyInput from "@/components/common/MyInput";
+import { SlSocialGoogle } from "react-icons/sl";
+import {Authentication} from "@/components/Authentication";
 const Login = () => {
+
+  const handleStandardLogin = () => {
+    console.log("this will be for standard login");
+  }
+
+
   return(
-    <div className="flex justify-center items-center h-[90vh]">
-    <div className="flex flex-col items-center w-[45rem] py-12 px-28 bg-black rounded-3xl space-y-5">
-      <div className="w-1/2">
-        <Image
-          src={logo}
-          alt={"cinemax logo"}
-        />
-      </div>
+    <Authentication>
       <p className="text-2xl">Logowanie</p>
-      <p className="flex justify-around w-full items-center">
-        <label className="">
-          Podaj email:
-        </label>
-        <input className="text-black w-[70%] h-10 rounded-l"/>
-      </p>
-      <p className="flex justify-around w-full">
-        <label className="">
-          Podaj hasło:
-        </label>
-        <input className="text-black w-[70%] h-10 rounded-l"/>
-      </p>
-      <p>
-        TODO:
-        Zaloguj się;
-        lub;
-        kontynuuj z Google;
-        Przetworzymy twój adres email, żeby sprawdzić czy jesteś już zalogowany
-      </p>
-    </div>
-    </div>
+      <MyInput
+        label={'Podaj email:'}
+        placeholder={'E-mail |'}
+      />
+      <MyInput
+        label={'Podaj hasło:'}
+        placeholder={'Hasło |'}
+      />
+      <MyButton
+        className="px-10 py-2 font-medium"
+        onClick={handleStandardLogin}
+      >
+        Zaloguj się
+      </MyButton>
+    </Authentication>
   );
 }
 
