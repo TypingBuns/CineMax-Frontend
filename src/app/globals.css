@@ -3,7 +3,7 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -42,4 +42,16 @@ body {
 .customBackGgGradient{
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 20%, rgba(14, 18, 51, 0.1) 100%);
+}
+.mask {
+  -webkit-mask:
+    radial-gradient(circle 0px at top    left ,#0000 98%,#000) top    left,
+    radial-gradient(circle 20px at top    right,#0000 98%,#000) top    right,
+    radial-gradient(circle 0px at bottom left ,#0000 98%,#000) bottom left,
+    radial-gradient(circle 20px at bottom right,#0000 98%,#000) bottom right;
+  -webkit-mask-size:51% 51%;
+  -webkit-mask-repeat:no-repeat;
+}
+.customShadowWhite{
+  filter: drop-shadow(-10px -10px 10px rgba(255, 255, 255, 0.35)) drop-shadow(10px 10px 10px rgba(255, 255, 255, 0.35));
 }
