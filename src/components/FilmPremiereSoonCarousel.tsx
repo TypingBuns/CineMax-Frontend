@@ -12,6 +12,7 @@ import abigail_poster_jpg from "@/assets/premiere-soon/abigail.jpg";
 import niepokalana_poster_jpg from "@/assets/premiere-soon/niepokalana.jpg";
 import mojpiesartur_poster_jpg from "@/assets/premiere-soon/moj-pies-artur.jpg";
 import kiciakocia_poster_jpg from "@/assets/premiere-soon/kicia-kocia.jpg";
+import leonardo_odkrywca_jpg from "@/assets/premiere-soon/leonardo-odkrywca.jpg";
 import Link from "next/link";
 import { FaPlay } from "react-icons/fa";
 
@@ -64,6 +65,13 @@ const sliderPremiere = [
   {
     src: kiciakocia_poster_jpg,
     title: "Kicia Kocia w przedszkolu",
+    dateofpremiere: "26 kwiecien 2024",
+    description: "Odważna, ciekawska kotka wyrusza razem z przyjaciółmi na spotkanie przygody i odkrywa otaczający ją barwny świat, ucząc się przy tym ważnych rzeczy.",
+    link: "https://www.youtube.com/watch?v=n6SZzOXLbBg",
+  },
+  {
+    src: leonardo_odkrywca_jpg,
+    title: "leonardo_odkrywca",
     dateofpremiere: "26 kwiecien 2024",
     description: "Odważna, ciekawska kotka wyrusza razem z przyjaciółmi na spotkanie przygody i odkrywa otaczający ją barwny świat, ucząc się przy tym ważnych rzeczy.",
     link: "https://www.youtube.com/watch?v=n6SZzOXLbBg",
