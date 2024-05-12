@@ -22,10 +22,10 @@ const Login = () => {
         placeholder={'Hasło'}
       />
       <MyButton
-        className="px-10 py-2 font-medium"
+        className="px-4 py-2 font-medium"
         onClick={handleStandardLogin}
       >
-        Zaloguj się
+        <p className="group-hover:text-red-700 group-hover:font-bold font-medium duration-100">Zaloguj się</p>
       </MyButton>
     </Authentication>
   );

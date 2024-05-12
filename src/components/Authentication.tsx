@@ -30,10 +30,10 @@ export function Authentication({
           className="px-4 py-2 font-medium flex items-center space-x-2.5"
           onClick={handleGoogleLogin}
         >
-          <SlSocialGoogle className="text-3xl fill-black"/>
-          <p>Kontynuuj z Google</p>
+          <SlSocialGoogle className="text-3xl fill-black group-hover:fill-red-700 group-hover:font-black duration-100"/>
+          <p className="group-hover:text-red-700 group-hover:font-bold duration-100">Kontynuuj z Google</p>
         </MyButton>
-        <p className="text-[0.7rem] text-center">
+        <p className="text-[0.85rem] text-center">
           Przetworzymy twój adres email, żeby sprawdzić czy jesteś już zalogowany
         </p>
       </div>

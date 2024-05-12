@@ -9,7 +9,7 @@ export function MyButton({
 }) {
   return (
     <button
-      className={`bg-red-600 rounded-3xl ${className}`}
+      className={`group bg-red-600 rounded-3xl hover:bg-gray-200 hover:px-6 duration-300 ease-out hover:shadow-red-800 hover:shadow-lg ${className}`}
       onClick={onClick}
     >
       {children}
