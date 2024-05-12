@@ -18,7 +18,7 @@ const Navbar = () => {
       <hr />
       <ul className='flex h-full items-center justify-center' >
         <li className='h-full flex'>
-          <Link className='navbar-mid' href="/order"><p>Repertuar</p></Link>
+          <Link className='navbar-mid' href="/repertoire"><p>Repertuar</p></Link>
           </li>
         <li className='h-full flex'>
           <Link className='navbar-mid' href="/price"><p>Cennik</p></Link>
