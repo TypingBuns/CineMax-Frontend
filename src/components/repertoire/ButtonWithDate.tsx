@@ -10,16 +10,8 @@ function getDate(offset: number = 0) {
     ];
     const monthIndex = today.getMonth();
     const month = monthNames[monthIndex];
-    
-    // if(offset==0){
-    //   return "Dzisiaj"
-    // }
-    // if(offset==1){
-    //   return "Jutro"
-    // }
-    // else{
+
       return `${day} ${month}`;
-    // }
   }
   function getDayOfWeek(offset: number = 0){
     const today = new Date();
