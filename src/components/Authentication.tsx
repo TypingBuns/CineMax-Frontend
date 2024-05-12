@@ -17,7 +17,7 @@ export function Authentication({
 
   return(
     <div className="flex justify-center items-center h-[90vh]">
-      <div className="flex flex-col items-center space-y-5 w-[45rem] py-12 px-28 rounded-3xl bg-slate-950 shadow-violet-900 shadow-xl">
+      <div className="flex flex-col items-center space-y-5 w-[45rem] py-12 px-28 rounded-3xl bg-gray-800/45 shadow-blue-900 shadow-2xl">
         <div className="w-1/2">
           <Image
             src={logo}

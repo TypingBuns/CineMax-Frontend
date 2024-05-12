@@ -16,20 +16,16 @@ const Register = () => {
     <Authentication>
         <p className="text-2xl">Rejestracja</p>
         <MyInput
-          label={'Podaj email:'}
-          placeholder={'E-mail |'}
+          placeholder={'E-mail'}
         />
         <MyInput
-          label={'Podaj hasło:'}
-          placeholder={'Hasło |'}
+          placeholder={'Hasło'}
         />
         <MyInput
-          label={'Podaj imie i nazwisko:'}
-          placeholder={'Dane użytkownika |'}
+          placeholder={'Imię i nazwisko'}
         />
         <MyInput
-          label={'Podaj telefon:'}
-          placeholder={'Telefon |'}
+          placeholder={'Numer telefonu'}
         />
         <MyButton
           className="px-10 py-2 font-medium"
