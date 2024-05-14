@@ -2,6 +2,7 @@ import { appAPI } from "@/utils/appAPI";
 import { AxiosResponse } from "axios";
 
 export interface GetMovieData {
+    id: number
     title: string,
     originalTitle: string,
     categories: string,
@@ -27,11 +28,11 @@ export async function getMovieDetails(): Promise<GetMovieData[] | string> {
         console.log("Filmy pobrano poprawnie!");
         return response.data;
       } else {
-        console.error("Wystąpił błąd podczas pobierania szczegółów kortu");
-        return "Wystąpił błąd podczas pobierania szczegółów kortu";
+        console.error("Wystąpił błąd podczas pobierania szczegółów sekcji 'Now playing'");
+        return "Wystąpił błąd podczas pobierania szczegółów sekcji 'Now playing'";
       }
     } catch (error: any) {
-      console.error("Wystąpił błąd podczas pobierania szczegółów kortu");
-      return "Wystąpił błąd podczas pobierania szczegółów kortu";
+      console.error("Wystąpił błąd podczas pobierania szczegółów sekcji 'Now playing'");
+      return "Wystąpił błąd podczas pobierania szczegółów sekcji 'Now playing'";
     }
 }
