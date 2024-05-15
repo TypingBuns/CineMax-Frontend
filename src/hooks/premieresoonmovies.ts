@@ -1,7 +1,7 @@
 import { appAPI } from "@/utils/appAPI";
 import { AxiosResponse } from "axios";
 
-export interface GetMovieData {
+export interface GetMovieDataPremiereSoon {
   id: number;
   title: string;
   originalTitle: string;
@@ -16,14 +16,14 @@ export interface GetMovieData {
   bannerImage: string;
 }
 
-export async function getMovieDetails(): Promise<GetMovieData[] | string> {
+export async function getMovieDetailsPremiereSoon(): Promise<
+  GetMovieDataPremiereSoon[] | string
+> {
   try {
-    const response: AxiosResponse<GetMovieData[] | string> = await appAPI.get(
-      `/api/movies`,
-      {
+    const response: AxiosResponse<GetMovieDataPremiereSoon[] | string> =
+      await appAPI.get(`/api/movies`, {
         withCredentials: true,
-      }
-    );
+      });
 
     if (typeof response.data === "string") {
       console.error("Wystąpił błąd podczas pobierania szczegółów filmów");
@@ -31,7 +31,7 @@ export async function getMovieDetails(): Promise<GetMovieData[] | string> {
     } else {
       const sortedMovies = response.data.sort((a, b) => {
         return (
-          new Date(b.releaseDate).getTime() - new Date(a.releaseDate).getTime()
+          new Date(a.releaseDate).getTime() - new Date(b.releaseDate).getTime()
         );
       });
 
@@ -40,8 +40,8 @@ export async function getMovieDetails(): Promise<GetMovieData[] | string> {
         .toString()
         .padStart(2, "0")}-${today.getDate().toString().padStart(2, "0")}`;
       const filteredMovies = sortedMovies
-        .filter((movie) => movie.releaseDate <= todayDateString)
-        .slice(0, 8);
+        .filter((movie) => movie.releaseDate >= todayDateString)
+        .slice(0, 10);
 
       console.log("Filmy pobrano poprawnie!");
       return filteredMovies;

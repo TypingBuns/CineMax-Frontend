@@ -8,12 +8,12 @@ import { FaPlay } from "react-icons/fa";
 import "tw-elements-react/dist/css/tw-elements-react.min.css";
 import { TECarousel, TECarouselItem } from "tw-elements-react";
 
-import budda_jpg from "@/assets/budda.jpg";
-import godzilla_jpg from "@/assets/godzilla.jpg";
-import pogromocyduchow_jpg from "@/assets/pogromocyduchow.jpg";
 import Link from "next/link";
 
-import { GetMovieData, getMovieDetails } from "@/hooks/movie";
+import {
+  GetMovieData,
+  getMovieDetailsNowPlaying,
+} from "@/hooks/nowplayingmovies";
 import { DiVim } from "react-icons/di";
 import LoadingScene from "./common/LoadingScene";
 
@@ -36,7 +36,7 @@ export default function CarouselBasicExample(): JSX.Element {
     data: moviesData,
     isLoading: moviesLoading,
     isError: moviesError,
-  } = useQuery("movies", getMovieDetails);
+  } = useQuery("moviesnowplaying", getMovieDetailsNowPlaying);
 
   const theme = {
     prevBtn:
@@ -46,7 +46,6 @@ export default function CarouselBasicExample(): JSX.Element {
     prevBtnIcon: "inline-block h-8 w-8 [&>svg]:h-8",
     nextBtnIcon: "inline-block h-8 w-8 [&>svg]:h-8",
   };
-  console.log("jeabc", moviesData);
 
   function formatDurationToHours(duration: number): string {
     const hours = Math.floor(duration / 60); // Oblicz godziny zaokrąglając w dół
