@@ -15,6 +15,7 @@ import Link from "next/link";
 
 import { GetMovieData, getMovieDetails } from "@/hooks/movie";
 import { DiVim } from "react-icons/di";
+import LoadingScene from "./common/LoadingScene";
 
 export default function CarouselBasicExample(): JSX.Element {
   // const [movies, setMovies] = useState<GetMovieData[]>([]);
@@ -124,7 +125,9 @@ export default function CarouselBasicExample(): JSX.Element {
           </TECarousel>
         </>
       ) : (
-        <div>Loading...</div>
+        <div>
+          <LoadingScene />
+        </div>
       )}
     </div>
   );
