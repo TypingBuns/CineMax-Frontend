@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="flex flex-col w-full items-center justify-center bg-gray-800/45">
       <div className="flex flex-col items-center justify-center my-4">
-        <span className="uppercase font-bold ">Śledź nas na Social Mediach!</span>
+        <span className="uppercase font-bold text-lg">Śledź nas na Social Mediach!</span>
         <div className="flex flex-row items-center justify-center my-4 gap-5">
         <Link href="https://www.facebook.com" className="flex flex-col items-center text-md" target="_blank">
         <FaFacebook className="text-3xl"/>
