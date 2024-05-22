@@ -21,7 +21,7 @@ const Footer = () => {
         <FaInstagram className="text-3xl "/>
         <p>Instagram</p>
         </Link>
-        
+
         <Link href="https://www.twitter.com" className="flex flex-col items-center text-md" target="_blank">
         <FaTwitter className="text-3xl"/>
         <p>Twitter</p>
@@ -63,7 +63,7 @@ const Footer = () => {
           <Link className="hover:text-gray-300 ease-in-out duration-100" href="/">Co gramy aktualnie</Link>
         </div>
 
-        
+
         <div className="flex flex-col ">
         <h1 className="uppercase font-bold mb-4 text-lg">Nasza aplikacja</h1>
           <div className="flex flex-row gap-2">

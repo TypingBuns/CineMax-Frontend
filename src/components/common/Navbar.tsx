@@ -1,11 +1,21 @@
-import React from 'react'
 import Link from "next/link";
 import Image from 'next/image'
-import { IoPerson } from "react-icons/io5";
 import logo from "@/assets/logo/cinemax-logo-small.png"
-const Navbar = () => {
+import dynamic from "next/dynamic";
+import {Session} from "next-auth";
+import {SignIn} from "@/components/sign-in";
+
+const DynamicHeaderAuth = dynamic(() => import("../header-auth"), {
+  ssr: false,
+});
+
+type Props = {
+  session: Session | null,
+}
+
+const Navbar = async (props: Props) => {
+
   return (
-    
     <div className='z-50 backdrop-blur w-3/6 h-20 px-6 flex items-center justify-between bg-gray-800/45 rounded-b-3xl mx-auto sticky top-0 hover:bg-customBackColor ease-in-out duration-300 '>
       <Link href="/">
       <Image
@@ -31,13 +41,9 @@ const Navbar = () => {
           </li>
       </ul>
       <div className='flex gap-6'>
-      {/* <span>Login</span>
-        <span>Rejestracja</span> */}
-      <Link className='navbar-right flex items-center' href="/login"><IoPerson /><p>&nbsp;Login</p></Link>
-      <Link className='navbar-right' href="/register"><p>Rejestracja</p></Link>
+        <DynamicHeaderAuth session={props.session} />
       </div>
     </div>
-
   )
 }
 
