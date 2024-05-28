@@ -4,12 +4,14 @@ import budda from '@/assets/budda_poster.jpg'
 import { ButtonWithTime } from './ButtonWithTime'
 import Link from 'next/link'
 import { FaPlay } from 'react-icons/fa'
+import {useRouter} from "next/navigation";
 
 const onClickEvent = (time: string) => {
-  console.log("Wybrano godzine:", time);
+  window.location.href = `/reserve`
 }
 
 interface RepertoireOnceProps {
+    id: number,
     title: string,
     categories: string,
     duration: number,
@@ -18,7 +20,10 @@ interface RepertoireOnceProps {
     poster:string,
   }
 
-const RepertoireOnce: React.FC<RepertoireOnceProps> = ({ title, categories, duration, description, trailerLink, poster}) => {
+const RepertoireOnce: React.FC<RepertoireOnceProps> = ({id, title, categories, duration, description, trailerLink, poster}: RepertoireOnceProps) => {
+
+  const router = useRouter()
+
   return (
     <div className='flex flex-row bg-neutral-50/90 w-3/4 h-[16rem] text-custombgColor mx-20 rounded-3xl drop-shadow-2xl'>
         <div className='relative flex justify-center items-center ml-3 '>
@@ -44,16 +49,16 @@ const RepertoireOnce: React.FC<RepertoireOnceProps> = ({ title, categories, dura
               <p className='px-2 bg-neutral-300/30 border-2 border-neutral-300/90 drop-shadow-2xl rounded-3xl text-sm font-normal'>{duration} minut</p>
               <p className='text-sm'>{categories}</p>
             </div>
-            
+
           </div>
           <p className='border-y-2 py-2  border-neutral-300/90 mb-5'>{description}</p>
           <div className='flex flex-row w-full items-center gap-2'>
-            <ButtonWithTime time='16:00' onClick={() => onClickEvent("16:00")}/>
-            <ButtonWithTime time='18:00' onClick={() => onClickEvent("18:00")}/>
+            <ButtonWithTime time='16:00' onClick={() => router.push(`/reserve/${id}?time=${encodeURIComponent('16:00')}`)}/>
+            <ButtonWithTime time='18:00' onClick={() => router.push(`/reserve/${id}?time=${encodeURIComponent('18:00')}`)}/>
           </div>
 
         </div>
-        
+
     </div>
   )
 }
