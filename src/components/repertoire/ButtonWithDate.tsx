@@ -42,7 +42,10 @@ export function ButtonWithDate({ className, onClick, dayOffset }: ButtonProps) {
     const [currentDate, setCurrentDate] = useState(getDate(dayOffset));
     const [currentDayOfWeek, setCurrentDayOfWeek] = useState(getDayOfWeek(dayOffset));
   return (
-    <button className={`bg-rose-700 w-full h-full p-2  rounded-2xl hover:text-custombgColor hover:bg-neutral-50/90 hover:drop-shadow-2xl hover:border-custombgColor border-2 ease-out duration-300 ${className}`} onClick={onClick}>
+    <button
+      className={`bg-rose-700 w-full h-full p-2  rounded-2xl hover:text-custombgColor hover:bg-neutral-50/90 hover:drop-shadow-2xl hover:border-custombgColor border-2 ease-out duration-300 ${className}`}
+      onClick={onClick}
+    >
       <p className='font-semibold'>{currentDayOfWeek}</p>
       <p className='text-sm'>{currentDate}</p>
     </button>

@@ -5,7 +5,10 @@ import RepertoireContainer from './RepertoireContainer';
 
 const onClickEvent = (day: number) => {
     console.log("Zamiana repertuaru na:",day);
-  }
+}
+
+const days = Array(7).fill(0);
+
 const RepertoireHeader = () => {
   return (
     <div className='w-full flex flex-col justify-center items-center gap-8'>
@@ -22,38 +25,16 @@ const RepertoireHeader = () => {
           <div className='flex flex-col w-full justify-start items-start pt-5 h-[50%]'>
             <p className='px-4 pt-4 bg-neutral-50/90 rounded-t-3xl customShadowWhite text-custombgColor font-medium'>Wybierz dzień seansu</p>
             <div className='flex flex-row bg-neutral-50/90 w-5/6 rounded-r-3xl rounded-b-3xl customShadowWhite justify-center items-center  gap-2 p-3'>
-            <ButtonWithDate
-            dayOffset={0}
-            onClick={() => onClickEvent(0)}>
-            </ButtonWithDate>
-            <ButtonWithDate
-            dayOffset={1}
-            onClick={() => onClickEvent(1)}>
-            </ButtonWithDate>
-            <ButtonWithDate
-            dayOffset={2}
-            onClick={() => onClickEvent(2)}>
-            </ButtonWithDate>
-            <ButtonWithDate
-            dayOffset={3}
-            onClick={() => onClickEvent(3)}>
-            </ButtonWithDate>
-            <ButtonWithDate
-            dayOffset={4}
-            onClick={() => onClickEvent(4)}>
-            </ButtonWithDate>
-            <ButtonWithDate
-            dayOffset={5}
-            onClick={() => onClickEvent(5)}>
-            </ButtonWithDate>
-            <ButtonWithDate
-            dayOffset={6}
-            onClick={() => onClickEvent(6)}>
-            </ButtonWithDate>
-            <ButtonWithDate
-            dayOffset={7}
-            onClick={() => onClickEvent(7)}>
-            </ButtonWithDate>
+              {days.map((item, index) => {
+                return (
+                    <ButtonWithDate
+                      key={index}
+                      dayOffset={index}
+                      onClick={() => onClickEvent(index)}
+                    >
+                    </ButtonWithDate>
+                  );
+              })}
             </div>
             <p className='pt-4 pl-1 text-sm text-neutral-50/80'>Aktualizacja repertuaru co tydzień w czwartek o godz. 17:00</p>
           </div>

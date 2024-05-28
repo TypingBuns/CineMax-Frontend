@@ -1,7 +1,6 @@
 import NowPlayingCarousel from "@/components/NowPlayingCarousel";
 import Introduction from "@/components/Introduction";
 import FilmPremiereSoonCarousel from "@/components/FilmPremiereSoonCarousel";
-import {AuthProvider} from "@/contexts/AuthContext";
 
 export default function Home() {
   return (
