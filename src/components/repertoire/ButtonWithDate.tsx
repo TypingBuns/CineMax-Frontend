@@ -65,7 +65,7 @@ export function ButtonWithDate({
       className={`bg-rose-700 w-full h-full p-2  rounded-2xl hover:text-custombgColor hover:bg-neutral-50/90 hover:drop-shadow-2xl hover:border-custombgColor border-2 ease-out duration-300
          ${
            isSelected
-             ? "text-custombgColor bg-neutral-50/40 drop-shadow-2xl border-custombgColor"
+             ? "text-custombgColor bg-gray-300 drop-shadow-2xl border-custombgColor"
              : ""
          }
         ${className}`}
