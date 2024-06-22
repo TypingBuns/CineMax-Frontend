@@ -51,7 +51,7 @@ const Register = () => {
           name={'name'}
           required={true}
           type={"text"}
-          placeholder={'Imię i nazwisko'}
+          placeholder={'Nazwa użytkownika'}
           onChange={(e) => setUserame(e.target.value)}
         />
         <MyInput

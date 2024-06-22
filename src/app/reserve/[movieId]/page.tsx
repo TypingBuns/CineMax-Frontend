@@ -3,6 +3,7 @@ import Image from "next/image";
 import budda from "@/assets/budda_poster.jpg";
 import React, { useEffect, useState } from "react";
 import MovieSeats from "@/components/Reserve/MovieSeats";
+import {useRouter} from "next/navigation";
 
 type Props = {
   params: { movieId: string };
@@ -10,9 +11,11 @@ type Props = {
 };
 
 const ReserveSubmit = () => {
+  const router = useRouter();
   return (
     <button
       className={`w-min px-4 py-2 bg-red-600 rounded-full shadow-secondary-900 shadow-md h-min text-gray-200 text-nowrap hover:bg-red-700 duration-100`}
+      onClick={() => router.replace('/order')}
     >
       Zarezerwuj miejsca
     </button>
@@ -183,7 +186,7 @@ const Reserve = (props: Props) => {
         <MovieSeats rows={rows} handleSeatChange={handleSeatChange} />
         <div className={`w-full h-[1.5px] bg-secondary-600 self-center`} />
         <div
-          className={`flex flex-col xl:flex-row w-full justify-between items-center gap-y-4`}
+          className={`flex flex-col lg:flex-row w-full justify-between items-center gap-y-4`}
         >
           <Legend />
           <ChoosenSeats rows={rows} />
