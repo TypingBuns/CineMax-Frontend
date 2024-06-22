@@ -12,6 +12,7 @@ import {
 } from "react-icons/md";
 import { IoMdImages, IoMdTime } from "react-icons/io";
 import { PiBaby } from "react-icons/pi";
+import { MyButton } from "@/components/common/MyButton";
 const CinemaForm = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,7 +30,7 @@ const CinemaForm = () => {
         : [...prevSelectedTimes, time]
     );
   };
-
+  const onClickEventAdd = () => console.log("Dodano seans");
   const times = [
     "9:30",
     "11:30",
@@ -57,24 +58,58 @@ const CinemaForm = () => {
                 <MdOutlineSubtitles className="text-xl" />
                 Tytuł filmu
               </label>
-              <input
+              <select
                 id="title"
-                type="text"
                 className="mt-1 block w-full bg-gray-800 text-white border border-gray-700 rounded py-2 px-3"
-              />
-            </div>
-            <div>
-              <label
-                className="flex flex-row gap-3 text-white"
-                htmlFor="description"
+                size={5}
               >
-                <MdOutlineDescription className="text-xl" />
-                Opis
-              </label>
-              <textarea
-                id="description"
-                className="mt-1 block w-full bg-gray-800 text-white border border-gray-700 rounded py-2 px-3"
-              ></textarea>
+                <option value="Garfield">Garfield</option>
+                <option value="Kaskader">Kaskader</option>
+                <option value="Challengers">Challengers</option>
+                <option value="Back to black. Historia Amy Winehouse">
+                  Back to black. Historia Amy Winehouse
+                </option>
+                <option value="Mój pies Artur">Mój pies Artur</option>
+                <option value="Supersiostry">Supersiostry</option>
+                <option value="Istoty fantastyczne">Istoty fantastyczne</option>
+                <option value="Niepokalana">Niepokalana</option>
+                <option value="Spy x Family Code: White">
+                  Spy x Family Code: White
+                </option>
+                <option value="Królestwo Planety Małp">
+                  Królestwo Planety Małp
+                </option>
+                <option value="Furiosa: Saga Mad Max">
+                  Furiosa: Saga Mad Max
+                </option>
+                <option value="W głowie się nie mieści 2">
+                  W głowie się nie mieści 2
+                </option>
+                <option value="Hit Man">Hit Man</option>
+                <option value="Jedno życie">Jedno życie</option>
+                <option value="Do usług szanownej pani">
+                  Do usług szanownej pani
+                </option>
+                <option value="Deadpool & Wolverine">
+                  Deadpool & Wolverine
+                </option>
+                <option value="Mój syn Ezra">Mój syn Ezra</option>
+                <option value="Horyzont. Rozdział 1">
+                  Horyzont. Rozdział 1
+                </option>
+                <option value="Gru i Minionki: Pod Przykrywką">
+                  Gru i Minionki: Pod Przykrywką
+                </option>
+                <option value="Borderlands">Borderlands</option>
+                <option value="Transformers: Początek">
+                  Transformers: Początek
+                </option>
+                <option value="Bulion i inne namiętości">
+                  Bulion i inne namiętości
+                </option>
+                <option value="Joker: Folie à deux">Joker: Folie à deux</option>
+                <option value="Leonardo. Odkrywca">Leonardo. Odkrywca</option>
+              </select>
             </div>
             <div className="flex space-x-10">
               <div className="w-1/2">
@@ -94,148 +129,25 @@ const CinemaForm = () => {
               <div className="w-1/2">
                 <label
                   className="flex flex-row gap-3 text-white"
-                  htmlFor="time"
-                >
-                  <IoMdTime className="text-xl" />
-                  Czas trwania
-                </label>
-                <input
-                  id="time"
-                  type="time"
-                  className="mt-1 block w-full bg-gray-800 text-white border border-gray-700 rounded py-2 px-3"
-                />
-              </div>
-            </div>
-            <div className="flex space-x-10">
-              <div>
-                <label
-                  className="flex flex-row gap-3 text-white"
                   htmlFor="hall"
                 >
                   <MdOutlineLocationOn className="text-xl" />
                   Sala seansu
                 </label>
-                <input
-                  id="hall"
-                  type="text"
-                  className="mt-1 block w-full bg-gray-800 text-white border border-gray-700 rounded py-2 px-3"
-                />
-              </div>
-              <div>
-                <label className="flex flex-row gap-3 text-white" htmlFor="age">
-                  <PiBaby className="text-xl" />
-                  Minimalny wiek
-                </label>
-                <input
-                  id="age"
-                  type="number"
-                  className="mt-1 block w-full bg-gray-800 text-white border border-gray-700 rounded py-2 px-3"
-                />
-              </div>
-            </div>
-            <div className="flex space-x-10">
-              <div className="w-1/2">
-                <label
-                  className="flex flex-row gap-3 text-white"
-                  htmlFor="genre"
-                >
-                  <MdMovie className="text-xl" />
-                  Gatunek filmu
-                </label>
                 <select
-                  id="genre"
+                  id="sala"
                   className="mt-1 block w-full bg-gray-800 text-white border border-gray-700 rounded py-2 px-3"
                 >
-                  <option value="Animowany">Animowany</option>
-                  <option value="Komedia">Komedia</option>
-                  <option value="Science-Fiction">Science-Fiction</option>
-                  <option value="Akcja">Akcja</option>
-                  <option value="Przygodowy">Przygodowy</option>
-                  <option value="Dokumentalny">Dokumentalny</option>
-                  <option value="Horror">Horror</option>
-                  <option value="Thriller">Thriller</option>
-                  <option value="Dramat">Dramat</option>
-                  <option value="Dokumentalny">Dokumentalny</option>
-                </select>
-              </div>
-              <div className="w-1/2">
-                <label
-                  className="flex flex-row gap-3 text-white"
-                  htmlFor="imageType"
-                >
-                  <MdScreenshotMonitor className="text-xl" />
-                  Typ obrazu
-                </label>
-                <select
-                  id="imageType"
-                  className="mt-1 block w-full bg-gray-800 text-white border border-gray-700 rounded py-2 px-3"
-                >
-                  <option value="2D - napisy">2D - napisy</option>
-                  <option value="2D - lektor">2D - lektor</option>
-                  <option value="2D - dubbing">2D - dubbing</option>
-                  <option value="3D - napisy">3D - napisy</option>
-                  <option value="3D - lektor">3D - lektor</option>
-                  <option value="3D - dubbing">3D - dubbing</option>
+                  <option value="sala 1">1</option>
+                  <option value="sala 2">2</option>
+                  <option value="sala 3">3</option>
+                  <option value="sala 4">4</option>
                 </select>
               </div>
             </div>
+
             <div className="flex flex-row justify-between">
-              <div className="flex flex-col">
-                <label className="flex flex-row gap-3 text-white">
-                  <IoMdImages className="text-xl" />
-                  Zdjęcie filmu
-                </label>
-                <div className="flex items-center space-x-4 mt-1">
-                  {selectedFile ? (
-                    <div className="flex flex-col items-center">
-                      <div className="w-[200px] h-[285px] flex items-center justify-center">
-                        <img
-                          src={URL.createObjectURL(selectedFile)}
-                          alt="Wybrane zdjęcie"
-                          className="border-gray-700 rounded-xl"
-                        />
-                      </div>
-                      <div className="relative mt-4">
-                        <input
-                          type="file"
-                          accept="image/*"
-                          onChange={handleFileChange}
-                          className="absolute inset-0 opacity-0 w-full h-full cursor-pointer"
-                        />
-                        <button
-                          type="button"
-                          className="bg-white/80  text-custombgColor font-bold py-2 px-4 rounded cursor-pointer mb-4"
-                        >
-                          Dodaj zdjęcie
-                        </button>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="flex flex-col items-center">
-                      <div className="w-[200px] h-[285px] bg-gray-800 border-gray-700 flex justify-center items-center flex-col mt-1 rounded-xl">
-                        <h2 className="text-sm">Brak wybranego zdjęcia</h2>
-                        <h2 className="text-sm">(zalecany rozmiar:</h2>
-                        <h2 className="text-sm">200 x 285 pikseli)</h2>
-                      </div>
-                      <div className="relative mt-4">
-                        <input
-                          type="file"
-                          accept="image/*"
-                          onChange={handleFileChange}
-                          className="absolute inset-0 opacity-0 w-full h-full cursor-pointer"
-                        />
-                        <button
-                          type="button"
-                          className="bg-white/80  text-custombgColor font-bold py-2 px-4 rounded cursor-pointer mb-4"
-                        >
-                          Dodaj zdjęcie
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-              <div>
+              <div className="w-full">
                 <label className="block text-white">Godziny seansów</label>
                 <div className="grid grid-cols-4 gap-2 mt-2">
                   {times.map((time) => (
@@ -257,12 +169,15 @@ const CinemaForm = () => {
             </div>
           </div>
           <div className="mt-6 flex justify-end">
-            <button
+            <MyButton
+              className="px-4 py-2 font-medium flex items-center space-x-2.5 bg-green-600 hover:shadow-success-500"
+              onClick={onClickEventAdd}
               type="submit"
-              className="py-2 px-4 bg-red-600 text-white rounded"
             >
-              Usun
-            </button>
+              <p className="group-hover:text-green-600 group-hover:font-bold duration-100">
+                Dodaj seans
+              </p>
+            </MyButton>
           </div>
         </form>
       </div>

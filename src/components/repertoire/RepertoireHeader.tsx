@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { ButtonWithDate } from "./ButtonWithDate";
 import RepertoireContainer from "./RepertoireContainer";
 
@@ -10,6 +10,12 @@ const onClickEvent = (day: number) => {
 const days = Array(7).fill(0);
 
 const RepertoireHeader = () => {
+  const [selectedDay, setSelectedDay] = useState(0);
+
+  const onClickEvent = (day: number) => {
+    console.log("Zamiana repertuaru na:", day);
+    setSelectedDay(day);
+  };
   return (
     <div className="w-full flex flex-col justify-center items-center gap-8">
       <div className="bg-gradient-to-tl from-rose-800 to-rose-500 w-3/5 rounded-3xl customShadow justify-center items-center flex flex-col">
@@ -33,6 +39,7 @@ const RepertoireHeader = () => {
                     key={index}
                     dayOffset={index}
                     onClick={() => onClickEvent(index)}
+                    isSelected={selectedDay === index}
                   ></ButtonWithDate>
                 );
               })}

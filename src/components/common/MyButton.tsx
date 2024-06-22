@@ -1,10 +1,9 @@
-
 type Props = {
-  children: React.ReactNode,
-  className?: string,
-  onClick?: React.MouseEventHandler<HTMLButtonElement>,
-  type?: 'submit' | 'reset' | 'button' | undefined
-}
+  children: React.ReactNode;
+  className?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  type?: "submit" | "reset" | "button" | undefined;
+};
 export function MyButton(props: Props) {
   return (
     <button
